@@ -10,6 +10,5 @@ numbers.forEach((number, index) => {
     ol.appendChild(li)
     console.log(index)
   }, index * 1000)
-  
 })
  
