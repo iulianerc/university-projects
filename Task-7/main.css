@@ -1,0 +1,9 @@
+#container {
+    width: 500px;
+    margin: auto;
+    color: red;
+}
+
+#item {
+    color: gray;
+}
