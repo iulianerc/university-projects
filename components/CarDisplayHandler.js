@@ -41,7 +41,7 @@ class CarsDisplayHandler {
   
   addDeleteButtonListener(carsDAO) {
     const deleteButtons = document.getElementsByClassName('deleteAction')
-  
+    
     for (const deleteButton of deleteButtons) {
       deleteButton.addEventListener('click', (event) => {
         carDAO.delete(event.target.dataset.carIndex)
@@ -49,5 +49,24 @@ class CarsDisplayHandler {
         this.addEventsListeners(carsDAO)
       })
     }
+  }
+  
+  calculateTotalPrice(carsDAO) {
+    const totalPrice = carsDAO.calculateTotalPrice()
+    
+    alert(`Total price = ${totalPrice}`)
+  }
+  
+  increasePriceForAllCars(carsDAO) {
+    carsDAO.modifyField()
+    this.render(carsDAO.getAll())
+    this.addEventsListeners(carsDAO)
+  }
+  
+  findElement(carsDAO) {
+    const carName = prompt('Give car name')
+    const car = carsDAO.findElements(carName)
+    
+    alert(car)
   }
 }

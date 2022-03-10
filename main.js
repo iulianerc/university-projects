@@ -77,3 +77,11 @@ addNewCarButton.addEventListener('click', (event) => {
   
   addForm.reset()
 })
+
+const calculateTotalPrice = document.getElementById('calculate_total_price')
+const increasePriceForAllCars = document.getElementById('increase_prices')
+const findElement = document.getElementById('find_a_car')
+
+calculateTotalPrice.addEventListener('click', () => carsDisplayHandler.calculateTotalPrice(carDAO))
+increasePriceForAllCars.addEventListener('click', () => carsDisplayHandler.increasePriceForAllCars(carDAO))
+findElement.addEventListener('click', () => carsDisplayHandler.findElement(carDAO))
