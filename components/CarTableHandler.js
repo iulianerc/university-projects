@@ -1,4 +1,4 @@
-class CarsTableHandler {
+class CarsDisplayHandler {
   demoTable = `
     <table id="car_table_demo" style="display: none">
       <tr>
@@ -15,6 +15,10 @@ class CarsTableHandler {
   }
   
   render(cars) {
+    if (cars instanceof Car) {
+      cars = [cars]
+    }
+    
     let carRows = ''
     cars.forEach((car) => {
       carRows += `

@@ -1,5 +1,5 @@
 const carDAO = new CarDAO()
-const carTableHandler = new CarsTableHandler()
+const carTableHandler = new CarsDisplayHandler()
 
 const carsProps = [
   {
@@ -37,3 +37,32 @@ const carsProps = [
 carDAO.addMany(carsProps)
 
 carTableHandler.render(carDAO.getAll())
+
+const nameInput = document.getElementById('nameInput')
+const engineTypeInput = document.getElementById('engineTypeInput')
+const maxSpeedInput = document.getElementById('maxSpeedInput')
+const priceInput = document.getElementById('priceInput')
+
+const addForm = document.getElementById('add_form')
+
+document
+  .getElementById('add_new_car')
+  .addEventListener('click', (event) => {
+    event.preventDefault()
+    
+    if (!addForm.checkValidity()) {
+      alert("Wrong input values, try again")
+      return;
+    }
+    
+    carDAO.add({
+      name: nameInput.value,
+      engineType: engineTypeInput.value,
+      maxSpeed: Number(maxSpeedInput.value),
+      price: Number(priceInput.value),
+    })
+    
+    carTableHandler.render(carDAO.getAll())
+    
+    addForm.reset()
+  })

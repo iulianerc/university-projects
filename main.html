@@ -7,9 +7,37 @@
 </head>
 <body>
 <h1>Cars</h1>
-<table id="car_table_container">
+<table id="car_table_container"></table>
+<br><br>
 
-</table>
+<h1>Add new Car</h1>
+
+<form id="add_form">
+  <label for="nameInput">
+    Name:
+    <input id="nameInput" type="text" required minlength="3">
+  </label>
+  <br><br>
+  <label for="engineTypeInput">
+    Engine Type:
+    <input id="engineTypeInput" type="text" required minlength="3">
+  </label>
+  <br><br>
+  <label for="maxSpeedInput">
+    Max Speed:
+    <input id="maxSpeedInput" type="number" required min="1">
+  </label>
+  <br><br>
+  <label for="priceInput">
+    Price:
+    <input id="priceInput" type="number" required min="1">
+  </label>
+  <br><br>
+  
+  <button id="add_new_car">Add car</button>
+</form>
+
+
 <script src="components/Car.js"></script>
 <script src="components/CarDAO.js"></script>
 <script src="components/CarTableHandler.js"></script>
