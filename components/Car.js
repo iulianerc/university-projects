@@ -5,16 +5,5 @@ class Car {
     this.maxSpeed = carProps.maxSpeed
     this.price = carProps.price
   }
-  
-  calculateTotalPrice() {
-    return 1;
-  }
-  
-  modifyField() {
-    return 1;
-  }
-  
-  findElements() {
-    return 1;
-  }
+  // Here should be used get set Methods - but is not the case
 }

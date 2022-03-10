@@ -1,5 +1,5 @@
 const carDAO = new CarDAO()
-const carTableHandler = new CarsDisplayHandler()
+const carsDisplayHandler = new CarsDisplayHandler()
 
 const carsProps = [
   {
@@ -34,37 +34,43 @@ const carsProps = [
   },
 ]
 
-carDAO.addMany(carsProps)
+if (!localStorage.getItem('carsProps')) {
+localStorage.setItem('carsProps', JSON.stringify(carsProps))
+}
 
-carTableHandler.render(carDAO.getAll())
-carTableHandler.addEventsListeners(carDAO)
+carDAO.addMany(
+  JSON.parse(localStorage.getItem('carsProps'))
+)
+
+carsDisplayHandler.render(carDAO.getAll())
+carsDisplayHandler.addEventsListeners(carDAO)
+
+const addForm = document.getElementById('add_form')
 
 const nameInput = document.getElementById('nameInput')
 const engineTypeInput = document.getElementById('engineTypeInput')
 const maxSpeedInput = document.getElementById('maxSpeedInput')
 const priceInput = document.getElementById('priceInput')
 
-const addForm = document.getElementById('add_form')
+const addNewCarButton = document.getElementById('add_new_car')
 
-document
-  .getElementById('add_new_car')
-  .addEventListener('click', (event) => {
-    event.preventDefault()
-    
-    if (!addForm.checkValidity()) {
-      alert("Wrong input values, try again")
-      return;
-    }
-    
-    carDAO.add({
-      name: nameInput.value,
-      engineType: engineTypeInput.value,
-      maxSpeed: Number(maxSpeedInput.value),
-      price: Number(priceInput.value),
-    })
+addNewCarButton.addEventListener('click', (event) => {
+  event.preventDefault()
   
-    carTableHandler.render(carDAO.getAll())
-    carTableHandler.addEventsListeners(carDAO)
-    
-    addForm.reset()
+  if (!addForm.checkValidity()) {
+    alert("Wrong input values, try again")
+    return;
+  }
+  
+  carDAO.add({
+    name: nameInput.value,
+    engineType: engineTypeInput.value,
+    maxSpeed: Number(maxSpeedInput.value),
+    price: Number(priceInput.value),
   })
+  
+  carsDisplayHandler.render(carDAO.getAll())
+  carsDisplayHandler.addEventsListeners(carDAO)
+  
+  addForm.reset()
+})
