@@ -1,7 +1,7 @@
 const carDAO = new CarDAO()
 const carsDisplayHandler = new CarsDisplayHandler()
 
-const carsProps = [
+let carsProps = [
   {
     name: 'BMW',
     engineType: 'metan',
@@ -35,12 +35,15 @@ const carsProps = [
 ]
 
 if (!localStorage.getItem('carsProps')) {
-localStorage.setItem('carsProps', JSON.stringify(carsProps))
+  localStorage.setItem('carsProps', JSON.stringify(carsProps))
 }
 
-carDAO.addMany(
-  JSON.parse(localStorage.getItem('carsProps'))
-)
+carsProps = JSON.parse(localStorage.getItem('carsProps'))
+carDAO.addMany(carsProps)
+
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('carsProps', JSON.stringify(carDAO.getAll()))
+})
 
 carsDisplayHandler.render(carDAO.getAll())
 carsDisplayHandler.addEventsListeners(carDAO)
