@@ -13,6 +13,12 @@ class CarDAO {
     return this
   }
   
+  delete(carIndex) {
+    this.cars = this
+      .cars
+      .filter((car, index) => index !== Number(carIndex))
+  }
+  
   getAll() {
     return this.cars
   }

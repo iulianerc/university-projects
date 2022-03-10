@@ -37,6 +37,7 @@ const carsProps = [
 carDAO.addMany(carsProps)
 
 carTableHandler.render(carDAO.getAll())
+carTableHandler.addEventsListeners(carDAO)
 
 const nameInput = document.getElementById('nameInput')
 const engineTypeInput = document.getElementById('engineTypeInput')
@@ -61,8 +62,9 @@ document
       maxSpeed: Number(maxSpeedInput.value),
       price: Number(priceInput.value),
     })
-    
+  
     carTableHandler.render(carDAO.getAll())
+    carTableHandler.addEventsListeners(carDAO)
     
     addForm.reset()
   })
