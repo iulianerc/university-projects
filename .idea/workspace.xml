@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f537dd8-7e54-4f21-8238-ce07ec870a37" name="Changes" comment="Init" />
+    <list default="true" id="0f537dd8-7e54-4f21-8238-ce07ec870a37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/vuejs-app/src/components/AppBody/AppBody.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuejs-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuejs-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuejs-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuejs-app/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuejs-app/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuejs-app/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuejs-app/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/vue.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,9 +37,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/vuejs-app/src/App.vue" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -133,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650122108364</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Init vue">
+      <created>1650122852331</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650122852331</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +170,7 @@
     <MESSAGE value="Vue init" />
     <MESSAGE value="Vanila JS INIT" />
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Init vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init vue" />
   </component>
 </project>
