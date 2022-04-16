@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f537dd8-7e54-4f21-8238-ce07ec870a37" name="Changes" comment="" />
+    <list default="true" id="0f537dd8-7e54-4f21-8238-ce07ec870a37" name="Changes" comment="Vanila JS INIT">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="js_vanila" />
+        <entry key="$PROJECT_DIR$" value="ppw_evaluation_01.04.2022" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,6 +75,7 @@
       <workItem from="1646388887221" duration="653000" />
       <workItem from="1646389541112" duration="135000" />
       <workItem from="1646389676832" duration="107000" />
+      <workItem from="1650121416235" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="Vue init">
       <created>1645566147235</created>
