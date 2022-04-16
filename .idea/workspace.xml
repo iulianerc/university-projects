@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f537dd8-7e54-4f21-8238-ce07ec870a37" name="Changes" comment="Vanila JS INIT">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0f537dd8-7e54-4f21-8238-ce07ec870a37" name="Changes" comment="Init">
+      <change afterPath="$PROJECT_DIR$/vuejs-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuejs-app/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ppw_evaluation_01.04.2022" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,7 +88,7 @@
       <workItem from="1646388887221" duration="653000" />
       <workItem from="1646389541112" duration="135000" />
       <workItem from="1646389676832" duration="107000" />
-      <workItem from="1650121416235" duration="50000" />
+      <workItem from="1650121416235" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="Vue init">
       <created>1645566147235</created>
@@ -112,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646389374179</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Init">
+      <created>1650121478974</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1650121478974</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +154,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Vue init" />
     <MESSAGE value="Vanila JS INIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vanila JS INIT" />
+    <MESSAGE value="Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init" />
   </component>
 </project>
