@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f537dd8-7e54-4f21-8238-ce07ec870a37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/vuejs-app/src/components/AppBody/AppBody.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuejs-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuejs-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuejs-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuejs-app/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuejs-app/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuejs-app/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuejs-app/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuejs-app/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +75,7 @@
       <workItem from="1646389541112" duration="135000" />
       <workItem from="1646389676832" duration="107000" />
       <workItem from="1650121416235" duration="760000" />
+      <workItem from="1650180236900" duration="97000" />
     </task>
     <task id="LOCAL-00001" summary="Vue init">
       <created>1645566147235</created>
@@ -147,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650122852331</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Init vue">
+      <created>1650123657373</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650123657373</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
