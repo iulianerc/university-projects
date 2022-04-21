@@ -37,31 +37,30 @@ export default {
         return ''
       }
       
-      const cryptArray = [];
       const messageRows = Math.ceil(this.encryptMessage.length / this.key.length);
-      const keyCharsCodes = this.prepareKeyCodes(cryptArray);
+      const [keyCharsCodes, rawCryptArray] = this.prepareKeyCodes();
       
       for (let messageRow = 0; messageRow < messageRows; messageRow++) {
         keyCharsCodes.forEach((keyCharCode, columnIndex) => {
           const messageCharIndex = columnIndex + messageRow * keyCharsCodes.length
-          cryptArray[keyCharCode].push(this.encryptMessage[messageCharIndex])
+          rawCryptArray[keyCharCode].push(this.encryptMessage[messageCharIndex])
         })
       }
-      console.log(cryptArray)
-      return cryptArray
-        .filter(el => el)
-        .map((cryptArrayRow) => cryptArrayRow.join(''))
-        .join('')
+      
+      return keyCharsCodes
+        .map((keyCharCode) => {
+          return rawCryptArray[keyCharCode].join('')
+        }).join('')
     },
     decrypt() {
       if (this.key === '' || this.decryptMessage === '') {
         return ''
       }
       
-      const cryptArray = [];
       const cryptRows = Math.ceil(this.decryptMessage.length / this.key.length);
-      const keyCharsCodes = this.prepareKeyCodes(cryptArray);
-      
+      const [keyCharsCodes, rawCryptArray] = this.prepareKeyCodes();
+  
+  
       keyCharsCodes.forEach((keyCharCode, columnIndex) => {
         let cryptRowLength = cryptRows
         let spread = 0;
@@ -73,38 +72,43 @@ export default {
         if (columnIndex > 1) {
           spread = columnIndex - 1
         }
-        
-        cryptArray[keyCharCode] = this
+  
+        rawCryptArray[keyCharCode] = this
           .decryptMessage
           .substr(columnIndex * cryptRows - spread, cryptRowLength)
           .split('')
       })
-  
-      console.log(cryptArray)
-  
-      let decryptedMessage = ''
       
+      console.log(rawCryptArray)
+      
+      let decryptedMessage = ''
+      console.log(keyCharsCodes)
       for (let cryptRow = 0; cryptRow < cryptRows; cryptRow++) {
         keyCharsCodes.forEach((keyCharCode) => {
-          decryptedMessage += typeof cryptArray[keyCharCode][cryptRow] === "undefined" ? '' :cryptArray[keyCharCode][cryptRow]
+          decryptedMessage += typeof rawCryptArray[keyCharCode][cryptRow] === "undefined" ? '' : rawCryptArray[keyCharCode][cryptRow]
         })
-      
+        
       }
       
       return decryptedMessage
     }
   },
   methods: {
-    prepareKeyCodes(cryptArray) {
-      return this
-        .key
+    prepareKeyCodes() {
+      const rawCryptArray = []
+      const keyCharsCodes = this.key
         .split('')
         .map((keyChar) => {
           const keyCharCode = keyChar.toUpperCase().charCodeAt(0);
-          cryptArray[keyCharCode] = [];
+          rawCryptArray[keyCharCode] = [];
           
           return keyCharCode;
         });
+      
+      return [
+        keyCharsCodes,
+        rawCryptArray
+      ];
     },
   }
 };
