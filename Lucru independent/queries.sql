@@ -28,14 +28,27 @@ from STUDENT
 order by ANUL, PRENUME, NUME, BURSA;
 
 
+# 80.
+set @balti_rating = (select max(RATING) from UNIVERSITATE where ORAS like '%Balti%' limit 1);
+select UNIV_DEN, ORAS, RATING
+from UNIVERSITATE
+where RATING >= @balti_rating and ORAS not like '%balti%';
+# 81.
+begin;
+insert into CURS (CURS_ID, CURS_DEN, ORE, SEMESTRU)
+values (201,
+        'Algebra',
+        72,
+        4);
 
-# 8.
+select *
+from CURS;
 
-
+rollback;
 # 82.
 begin;
 insert into STUDENT (ST_ID, NUME, PRENUME, BURSA, ANUL, ORAS, DATA_N, UNIV_ID)
-values ((select last_student.ST_ID + 1 from STUDENT as last_student order by ST_ID DESC limit 1),
+values ((select last_student.ST_ID + 1 from STUDENT as last_student order by last_student.ST_ID DESC limit 1),
         'Osman',
         'Nicolae',
         null,
