@@ -26,8 +26,6 @@ where CURS_ID = 12;
 select *
 from STUDENT
 order by ANUL, PRENUME, NUME, BURSA;
-
-
 # 80.
 set @balti_rating = (select max(RATING) from UNIVERSITATE where ORAS like '%Balti%' limit 1);
 select UNIV_DEN, ORAS, RATING
@@ -152,7 +150,7 @@ where ST_ID in (select NOTE_EXAM.ST_ID
 
 # 95.
 alter table STUDENT
-    drop index year,
+    drop  index year,
     add index year (ANUL ASC);
 # 96.
 drop view if exists students_marks;
