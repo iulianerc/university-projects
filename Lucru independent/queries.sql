@@ -32,13 +32,53 @@ order by ANUL, PRENUME, NUME, BURSA;
 # 8.
 
 
-# 9.
+# 82.
+begin;
+insert into STUDENT (ST_ID, NUME, PRENUME, BURSA, ANUL, ORAS, DATA_N, UNIV_ID)
+values ((select last_student.ST_ID + 1 from STUDENT as last_student order by ST_ID DESC limit 1),
+        'Osman',
+        'Nicolae',
+        null,
+        1,
+        'Balti',
+        null,
+        (select UNIV_ID from UNIVERSITATE where UNIV_DEN like '%usb%' limit 1));
+select *
+from STUDENT;
 
-
+rollback;
 # 83.
-# 84.
-# 85.
+begin;
 
+delete
+from NOTE_EXAM
+where ST_ID = 12;
+
+select *
+from NOTE_EXAM;
+
+rollback;
+# 84.
+begin;
+update UNIVERSITATE
+set RATING = RATING + 300
+where ORAS like '%cahul%';
+
+select *
+from UNIVERSITATE
+where ORAS like '%cahul%';
+
+rollback;
+# 85.
+begin;
+update STUDENT
+set ORAS = 'Balti'
+where NUME like '%popescu%'
+;
+select *
+from STUDENT
+where NUME like '%popescu%';
+rollback;
 # 86.
 drop view if exists student_from_chisinau;
 
